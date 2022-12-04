@@ -5,6 +5,7 @@ const refs = {
 export default function crieateGallery(photos) {
   for (const photo of photos) {
     refs.gallery.innerHTML += `<div class="photo-card">
+    <p class='visually-hidden photo-card__id'>${photo.id}</p>
   <img src="${photo.webformatURL}" alt="${photo.tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
