@@ -60,14 +60,17 @@ function selectCard(event) {
       watchedPhoto = newWatchedPhoto;
       event.target.textContent = 'Додати';
     } else {
+      
       watchedPhoto.push(JSON.stringify(arrey.data.hits[0]));
       redoBtn();
     }
+
     // console.dir(watchedPhoto);
 
     // for (const photo of watchedPhoto) {
     //   const value = JSON.parse(photo);
     // }
+
     localStorage.setItem('watched', JSON.stringify(watchedPhoto));
   });
 }
